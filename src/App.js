@@ -36,7 +36,7 @@ export default function App() {
       <pointLight position={[10, 10, 10]} />
       <Box position={[-1.2, 0, 0]} />
       <Box position={[1.2, 0, 0]} />
-      <Field position={[0,0,0]} />
+      <Field position={[0,-1,0]} rotation={[-Math.PI/2.2,0,0]} />
       </Suspense>
     </Canvas>
   )

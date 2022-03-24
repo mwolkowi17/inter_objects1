@@ -11,7 +11,7 @@ export function Field(props){
         <>
         <mesh {...props}>
          
-            <planeGeometry args={[2,2]} />
+            <planeGeometry args={[12,7]} />
             <meshStandardMaterial map={texture} />
         </mesh>
         </>
