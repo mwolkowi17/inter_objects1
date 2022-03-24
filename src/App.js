@@ -2,6 +2,7 @@
 import React, {Suspense, useRef, useState } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import {Field} from './Field'
+import { OrbitControls } from '@react-three/drei'
 
 
 function Box(props) {
@@ -31,6 +32,7 @@ export default function App() {
   return (
     
     <Canvas>
+      <OrbitControls />
       <Suspense fallback={null}>
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
