@@ -1,6 +1,7 @@
 
-import React, { useRef, useState } from 'react'
+import React, {Suspense, useRef, useState } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
+import {Field} from './Field'
 
 
 function Box(props) {
@@ -28,11 +29,15 @@ function Box(props) {
 export default function App() {
 
   return (
+    
     <Canvas>
+      <Suspense fallback={null}>
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
       <Box position={[-1.2, 0, 0]} />
       <Box position={[1.2, 0, 0]} />
+      <Field position={[0,0,0]} />
+      </Suspense>
     </Canvas>
   )
 }
