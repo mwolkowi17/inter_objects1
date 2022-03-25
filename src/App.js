@@ -4,6 +4,7 @@ import { Canvas, useFrame } from '@react-three/fiber'
 import {Field} from './Field'
 import { OrbitControls } from '@react-three/drei'
 import {Model1} from './Modeltest'
+import {Roller1} from './Roller1'
 
 
 function Box(props) {
@@ -33,15 +34,15 @@ export default function App() {
 
   return (
     
-    <Canvas camera={{ fov: 75, near: 0.1, far: 1000, position: [0, 0, 4.5] }}>
+    <Canvas camera={{ fov: 75, near: 0.1, far: 1000, position: [0, 3, 4.8] }}>
       <OrbitControls />
       <Suspense fallback={null}>
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
-      <Box position={[-1.2, 0, 0]} />
-      <Box position={[1.2, 0, 0]} />
+      
       <Field position={[0,-1,-0.3]} rotation={[-Math.PI/2,0,0]} />
-      <Model1  position={[-1,0,0]} scale={[0.05,0.05,0.05]} />
+    
+      <Roller1 position={[-2.82,-1,0.3]} scale={[0.023,0.023,0.023]} />
       </Suspense>
     </Canvas>
   )
