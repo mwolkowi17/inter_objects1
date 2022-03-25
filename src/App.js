@@ -3,6 +3,7 @@ import React, {Suspense, useRef, useState } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 import {Field} from './Field'
 import { OrbitControls } from '@react-three/drei'
+import {Model1} from './Modeltest'
 
 
 function Box(props) {
@@ -24,6 +25,7 @@ function Box(props) {
       onPointerOut={(event) => setHover(false)}>
       <boxGeometry args={[1, 1, 1]} />
       <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
+      
     </mesh>
   )
 }
@@ -39,6 +41,7 @@ export default function App() {
       <Box position={[-1.2, 0, 0]} />
       <Box position={[1.2, 0, 0]} />
       <Field position={[0,-1,-0.3]} rotation={[-Math.PI/2,0,0]} />
+      <Model1  position={[-1,0,0]} scale={[0.05,0.05,0.05]} />
       </Suspense>
     </Canvas>
   )
