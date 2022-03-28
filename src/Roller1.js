@@ -3,7 +3,7 @@ import { useGLTF } from '@react-three/drei'
 
 export function Roller1(props) {
   const group = useRef()
-  const { scene, materials } = useGLTF('/40-ERP.glb')
+  const { scene, materials } = useGLTF('/scene1.gltf')
   console.log(materials);
   return (
     <group ref={group} {...props} dispose={null}>
@@ -12,4 +12,4 @@ export function Roller1(props) {
   )
 }
 
-useGLTF.preload('/40-ERP.glb')
+useGLTF.preload('/scene1.gltf')

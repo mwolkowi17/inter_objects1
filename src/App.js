@@ -34,15 +34,16 @@ export default function App() {
 
   return (
     
-    <Canvas camera={{ fov: 75, near: 0.1, far: 1000, position: [0, 3, 4.8] }}>
+    <Canvas camera={{ fov: 75, near: 0.1, far: 1000, position: [-10, 6, 30] }}>
       <OrbitControls />
       <Suspense fallback={null}>
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
       
-      <Field position={[0,-1,-0.3]} rotation={[-Math.PI/2,0,0]} />
+     {/* <Field position={[0,-1,-0.3]} rotation={[-Math.PI/2,0,0]} />*/}
     
-      <Roller1 position={[-2.82,-1,0.3]} scale={[0.023,0.023,0.023]} />
+     {/* <Roller1 position={[-2.82,-1,0.3]} scale={[0.023,0.023,0.023]} />*/}
+     <Roller1 position={[0,0,0]}  />
       </Suspense>
     </Canvas>
   )
