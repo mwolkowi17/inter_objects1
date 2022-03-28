@@ -2,7 +2,7 @@
 import React, {Suspense, useRef, useState } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
 
-import { OrbitControls } from '@react-three/drei'
+import { OrbitControls, MeshReflectorMaterial } from '@react-three/drei'
 
 import {Roller1} from './Roller1'
 import {Model1} from './Model1'
@@ -49,8 +49,8 @@ export default function App() {
     <Canvas camera={{ fov: 75, near: 0.1, far: 80, position: [-10, 6, 30] }}>
       <OrbitControls />
       <Suspense fallback={null}>
-      <ambientLight />
-     {/* <pointLight position={[10, 10, 10]} />*/}
+     {/*} <ambientLight /> */}
+   <pointLight position={[5, 10, 20]} />
       
      {/* <Field position={[0,-1,-0.3]} rotation={[-Math.PI/2,0,0]} />*/}
     
@@ -67,6 +67,24 @@ export default function App() {
      <Model5 position={[0,0,0]} />
      <Model6 position={[0,0,0]} />
      <Model7 position={[0,0,0]} />
+     <mesh rotation={[-Math.PI / 2, 0, Math.PI / 1.33]} position={[0,-4.9, 0]} scale={[30,30,10]}>
+          <planeGeometry args={[10, 10]} />
+          <MeshReflectorMaterial
+            blur={[900, 100]}
+            resolution={1024}
+            mixBlur={1}
+            mixStrength={15}
+            depthScale={0.5}
+            minDepthThreshold={0.85}
+            color="#00A6FF"
+            metalness={0.6}
+            roughness={1}
+          />
+        </mesh>
+        <mesh receiveShadow rotation-x={-Math.PI / 2} position={[0, 0.001, 0]} scale={[5,5,5]}>
+          <planeGeometry args={[10, 10]} />
+          <shadowMaterial transparent color="black" opacity={0.4} />
+        </mesh>
       </Suspense>
     </Canvas>
   )
