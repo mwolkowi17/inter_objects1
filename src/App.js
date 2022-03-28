@@ -12,6 +12,7 @@ import {Model4} from './Model4'
 import {Model5} from './Model5'
 import {Model6} from './Model6'
 import {Model7} from './Model7'
+import {Strips1} from './Strips'
 
 
 
@@ -42,7 +43,7 @@ export default function App() {
 
   return (
     
-    <Canvas camera={{ fov: 75, near: 0.1, far: 1000, position: [-10, 6, 30] }}>
+    <Canvas camera={{ fov: 75, near: 0.1, far: 80, position: [-10, 6, 30] }}>
       <OrbitControls />
       <Suspense fallback={null}>
       <ambientLight />
@@ -52,7 +53,8 @@ export default function App() {
     
      {/* <Roller1 position={[-2.82,-1,0.3]} scale={[0.023,0.023,0.023]} />*/}
      {/*<Roller1 position={[0,0,0]}  />*/}
-     <Model1 position={[0,0,0]} />
+     <Strips1 position={[0,0,0]}/>
+     {/*<Model1 position={[0,0,0]} />*/}
      <Model2 position={[0,0,0]} />
      <Model3 position={[0,0,0]} />
      <Model4 position={[0,0,0]} />
