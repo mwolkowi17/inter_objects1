@@ -38,7 +38,7 @@ export default function App() {
       <OrbitControls />
       <Suspense fallback={null}>
       <ambientLight />
-      <pointLight position={[10, 10, 10]} />
+     {/* <pointLight position={[10, 10, 10]} />*/}
       
      {/* <Field position={[0,-1,-0.3]} rotation={[-Math.PI/2,0,0]} />*/}
     
