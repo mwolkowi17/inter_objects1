@@ -1,10 +1,18 @@
 
 import React, {Suspense, useRef, useState } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import {Field} from './Field'
+
 import { OrbitControls } from '@react-three/drei'
-import {Model1} from './Modeltest'
+
 import {Roller1} from './Roller1'
+import {Model1} from './Model1'
+import {Model2} from './Model2'
+import {Model3} from './Model3'
+import {Model4} from './Model4'
+import {Model5} from './Model5'
+import {Model6} from './Model6'
+import {Model7} from './Model7'
+
 
 
 function Box(props) {
@@ -43,7 +51,14 @@ export default function App() {
      {/* <Field position={[0,-1,-0.3]} rotation={[-Math.PI/2,0,0]} />*/}
     
      {/* <Roller1 position={[-2.82,-1,0.3]} scale={[0.023,0.023,0.023]} />*/}
-     <Roller1 position={[0,0,0]}  />
+     {/*<Roller1 position={[0,0,0]}  />*/}
+     <Model1 position={[0,0,0]} />
+     <Model2 position={[0,0,0]} />
+     <Model3 position={[0,0,0]} />
+     <Model4 position={[0,0,0]} />
+     <Model5 position={[0,0,0]} />
+     <Model6 position={[0,0,0]} />
+     <Model7 position={[0,0,0]} />
       </Suspense>
     </Canvas>
   )
