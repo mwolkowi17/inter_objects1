@@ -13,6 +13,9 @@ import {Model5} from './Model5'
 import {Model6} from './Model6'
 import {Model7} from './Model7'
 import {Strips1} from './Strips'
+import {Shapes} from './Shapes'
+import {Arrows1} from './Arrows'
+import {Text1} from './Text'
 
 
 
@@ -53,8 +56,11 @@ export default function App() {
     
      {/* <Roller1 position={[-2.82,-1,0.3]} scale={[0.023,0.023,0.023]} />*/}
      {/*<Roller1 position={[0,0,0]}  />*/}
-     <Strips1 position={[0,0,0]}/>
+     <Strips1 position={[0,0,0]} />
      {/*<Model1 position={[0,0,0]} />*/}
+     <Shapes position={[0,0,0]} />
+     <Arrows1 position={[0,0,0]} />
+     <Text1 position={[0,0,0]} />
      <Model2 position={[0,0,0]} />
      <Model3 position={[0,0,0]} />
      <Model4 position={[0,0,0]} />
