@@ -16,6 +16,7 @@ import {Strips1} from './Strips'
 import {Shapes} from './Shapes'
 import {Arrows1} from './Arrows'
 import {Text1} from './Text'
+import {Numbers} from './Numbers'
 
 
 
@@ -61,6 +62,7 @@ export default function App() {
      <Shapes position={[0,0,0]} />
      <Arrows1 position={[0,0,0]} />
      <Text1 position={[0,0,0]} />
+     <Numbers position={[0,0,0]} />
      <Model2 position={[0,0,0]} />
      <Model3 position={[0,0,0]} />
      <Model4 position={[0,0,0]} />
