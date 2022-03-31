@@ -10,12 +10,12 @@ export function Model2(props) {
     document.body.style.cursor = hovered ? 'pointer' : 'auto'
   }, [hovered])
 
-  const { scene, materials } = useGLTF('/figure2.gltf')
-  console.log(materials);
+  const { scene } = useGLTF('/figure2.gltf')
+  
   return (
     <group ref={group} {...props} dispose={null}>
      <primitive object={scene}
-     onClick={console.log('clicked')}
+     onClick={()=>console.log('clicked')}
      onPointerOver={() => setHovered(true)}
      onPointerOut={() => setHovered(false)}
      />
